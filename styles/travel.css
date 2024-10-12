@@ -23,6 +23,9 @@
     font-size: 2.5rem;
     font-weight: 800;
 }
+.small-heading{
+    font-size: 1.5rem;
+}
 .content{
     text-align: center;
     margin: 50px auto;
@@ -174,19 +177,25 @@ section{
     width: 100%;
     margin-bottom: 15px;
 }
-.deals-images .card-content h4{
-    font-size: 1.5rem;
-}
 .card-img{
     position: relative;
 }
-.card-content{
+.right-align{
     background-color: #ffffffc0;
     height: 70%;
     width: 40%;
     position: absolute;
     top: 100px;
     right: 100px;
+    border-radius: 16px;
+}
+.left-align{
+    background-color: #ffffffc0;
+    height: 70%;
+    width: 40%;
+    position: absolute;
+    top: 100px;
+    left: 100px;
     border-radius: 16px;
 }
 .card-content *{
@@ -205,6 +214,27 @@ section{
     color: #ff5400;
     font-weight: 800;
 }
+/* perfect place */
+#perfect-place{
+    display: flex;
+}
+/* newsletter */
+#newsletter{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+#newsletter *{
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+#newsletter form input{
+    display: block;
+    flex-grow: 1;
+}
+
+
 /* making responsive */
 /* small device */
 @media screen and (max-width: 600px){
@@ -222,18 +252,24 @@ section{
         padding: 10px;
         background-position: center;
     }
-    .banner form, .destination-img .country{
+    .banner form, .destination-img .country, #perfect-place, #newsletter{
         flex-direction: column;
         width: auto;
         height: auto;
     }
-    .banner form *{
+    .banner form *, .content, .card, .card p, .perfect-place-video iframe{
         width:auto;
     }
     #popular-tour-container{
         flex-direction: column;
     }
     .popular-tour-image img{
+        width: 100%;
+    }
+    .card-flex{
+        flex-direction: column;
+    }
+    #newsletter .images img{
         width: 100%;
     }
 
